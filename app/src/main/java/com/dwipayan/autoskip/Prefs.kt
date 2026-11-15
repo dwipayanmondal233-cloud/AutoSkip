@@ -7,6 +7,15 @@ object Prefs {
     const val FILE = "autoskip_prefs"
     const val KEY_ENABLED = "enabled"
     const val KEY_COUNT = "skip_count"
+    const val KEY_KEYWORDS = "keywords"
+
+    val DEFAULT_KEYWORDS = listOf(
+        "Skip",
+        "Skip Ad",
+        "Skip Ads",
+        "Skip intro",
+        "No thanks"
+    )
 
     fun get(context: Context): SharedPreferences =
         context.applicationContext.getSharedPreferences(FILE, Context.MODE_PRIVATE)
@@ -23,5 +32,14 @@ object Prefs {
 
     fun setCount(context: Context, value: Int) {
         get(context).edit().putInt(KEY_COUNT, value).apply()
+    }
+
+    fun getKeywords(context: Context): List<String> {
+        val raw = get(context).getString(KEY_KEYWORDS, null) ?: return DEFAULT_KEYWORDS
+        return raw.split("\n").map { it.trim() }.filter { it.isNotEmpty() }
+    }
+
+    fun setKeywords(context: Context, list: List<String>) {
+        get(context).edit().putString(KEY_KEYWORDS, list.joinToString("\n")).apply()
     }
 }
