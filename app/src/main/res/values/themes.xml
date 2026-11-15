@@ -1,15 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <style name="ShapeNeonSmall" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeNeonMedium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
     <style name="Theme.AutoSkip" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/neon_cyan</item>
         <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimaryContainer">@color/surface_variant</item>
+        <item name="colorOnPrimaryContainer">@color/neon_cyan</item>
         <item name="colorSecondary">@color/neon_green</item>
         <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondaryContainer">@color/surface_variant</item>
+        <item name="colorOnSecondaryContainer">@color/neon_green</item>
+        <item name="colorError">@color/neon_red</item>
         <item name="android:colorBackground">@color/bg_black</item>
         <item name="colorSurface">@color/surface_dark</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
         <item name="colorOnSurface">@color/text_main</item>
+        <item name="colorOnSurfaceVariant">@color/text_dim</item>
+        <item name="colorOutline">@color/outline_dim</item>
         <item name="android:windowBackground">@color/bg_black</item>
         <item name="android:statusBarColor">@color/bg_black</item>
         <item name="android:navigationBarColor">@color/bg_black</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeNeonSmall</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeNeonMedium</item>
     </style>
+
 </resources>
