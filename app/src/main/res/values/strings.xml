@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AutoSkip</string>
+    <string name="title_text">AutoSkip</string>
+    <string name="subtitle_text">Milestone 1 works. App is alive.</string>
+    <string name="accessibility_service_description">AutoSkip watches the screen and taps Skip buttons for you. It does not collect or send any data.</string>
+</resources>
