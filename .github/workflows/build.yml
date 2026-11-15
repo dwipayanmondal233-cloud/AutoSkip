@@ -3,7 +3,12 @@ name: Build APK
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'index.html'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -31,3 +36,11 @@ jobs:
         with:
           name: AutoSkip-debug
           path: app/build/outputs/apk/debug/app-debug.apk
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp app/build/outputs/apk/debug/app-debug.apk AutoSkip.apk
+          gh release delete latest --cleanup-tag --yes --repo ${{ github.repository }} || true
+          gh release create latest AutoSkip.apk --repo ${{ github.repository }} --target ${{ github.sha }} --title "AutoSkip (latest)" --notes "Latest debug build of AutoSkip." --latest
