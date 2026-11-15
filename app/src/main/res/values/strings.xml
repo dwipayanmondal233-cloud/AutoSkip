@@ -2,6 +2,16 @@
 <resources>
     <string name="app_name">AutoSkip</string>
     <string name="title_text">AutoSkip</string>
-    <string name="subtitle_text">Milestone 1 works. App is alive.</string>
+    <string name="subtitle_text">auto-click skip buttons</string>
+    <string name="status_label">SERVICE STATUS</string>
+    <string name="status_active">ACTIVE</string>
+    <string name="status_inactive">INACTIVE</string>
+    <string name="status_hint_active">Accessibility service is on.</string>
+    <string name="status_hint_inactive">Turn on AutoSkip in Accessibility settings.</string>
+    <string name="btn_open_settings">Open Accessibility Settings</string>
+    <string name="toggle_title">Skipping enabled</string>
+    <string name="toggle_hint">Pause without turning off the permission</string>
+    <string name="counter_label">TOTAL SKIPS</string>
+    <string name="btn_reset">Reset counter</string>
     <string name="accessibility_service_description">AutoSkip watches the screen and taps Skip buttons for you. It does not collect or send any data.</string>
 </resources>
