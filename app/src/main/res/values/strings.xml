@@ -13,5 +13,12 @@
     <string name="toggle_hint">Pause without turning off the permission</string>
     <string name="counter_label">TOTAL SKIPS</string>
     <string name="btn_reset">Reset counter</string>
+    <string name="keywords_label">KEYWORDS</string>
+    <string name="keywords_hint">Button text must match exactly. Tap x to delete.</string>
+    <string name="keyword_input_hint">New keyword</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_defaults">Restore default keywords</string>
+    <string name="msg_empty">Type a keyword first</string>
+    <string name="msg_duplicate">Already in the list</string>
     <string name="accessibility_service_description">AutoSkip watches the screen and taps Skip buttons for you. It does not collect or send any data.</string>
 </resources>
